@@ -1,0 +1,6 @@
+[workspace]
+title = "Agent"
+packages = ["claimhandler"]
+
+[build-options]
+remoteManagement = true

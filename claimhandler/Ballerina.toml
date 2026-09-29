@@ -1,0 +1,15 @@
+[package]
+org = "dulminakodagoda"
+name = "claimhandler"
+version = "0.1.0"
+distribution = "2201.13.5"
+title = "ClaimHandler"
+
+[build-options]
+sticky = true
+
+[[dependency]]
+org = "ballerina"
+name = "workflow"
+version = "0.10.0"
+
