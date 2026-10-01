@@ -10,11 +10,12 @@ final workflow:DurableAgent claimAgent = check new ({
 reject invalid claims with a clear reason. When a claim is valid, pay it with payClaim
 using the claimed amount. Finish with a one-line summary of the outcome.`
     },
-    model: wso2ModelProvider,
-    activities: [
-        validateClaim
+    model: wso2ModelProvider
 ,
-        {activity: payClaim, approvalPolicy: {userRoles: "Finance"}}
+    activities: [
+        {activity: validateClaim, name: "validateClaim"}
+,
+        {activity: payClaim, name: string `payClaim`, approvalPolicy: {userRoles: "Finance"}}
     ]
 });
 
